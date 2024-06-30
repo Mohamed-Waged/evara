@@ -1,11 +1,12 @@
 @extends('frontend.layouts.app')
 
-@section('title','Shop')
+@section('title', 'Shop')
 
 
-@section('quick_view')
+{{-- @section('quick_view')
     <!-- Quick view -->
-    <div class="modal fade custom-modal" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+    <div class="modal fade custom-modal" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -17,49 +18,63 @@
                                 <!-- MAIN SLIDES -->
                                 <div class="product-image-slider">
                                     <figure class="border-radius-10">
-                                        <img src="{{asset('admin/assets/front/imgs/shop/product-16-2.jpg')}}" alt="product image" />
+                                        <img src="{{ asset('admin/assets/front/imgs/shop/product-16-2.jpg') }}"
+                                            alt="product image" />
                                     </figure>
                                     <figure class="border-radius-10">
-                                        <img src="{{asset('admin/assets/front/imgs/shop/product-16-1.jpg')}}" alt="product image" />
+                                        <img src="{{ asset('admin/assets/front/imgs/shop/product-16-1.jpg') }}"
+                                            alt="product image" />
                                     </figure>
                                     <figure class="border-radius-10">
-                                        <img src="{{asset('admin/assets/front/imgs/shop/product-16-3.jpg')}}" alt="product image" />
+                                        <img src="{{ asset('admin/assets/front/imgs/shop/product-16-3.jpg') }}"
+                                            alt="product image" />
                                     </figure>
                                     <figure class="border-radius-10">
-                                        <img src="{{asset('admin/assets/front/imgs/shop/product-16-4.jpg')}}" alt="product image" />
+                                        <img src="{{ asset('admin/assets/front/imgs/shop/product-16-4.jpg') }}"
+                                            alt="product image" />
                                     </figure>
                                     <figure class="border-radius-10">
-                                        <img src="{{asset('admin/assets/front/imgs/shop/product-16-5.jpg')}}" alt="product image" />
+                                        <img src="{{ asset('admin/assets/front/imgs/shop/product-16-5.jpg') }}"
+                                            alt="product image" />
                                     </figure>
                                     <figure class="border-radius-10">
-                                        <img src="{{asset('admin/assets/front/imgs/shop/product-16-6.jpg')}}" alt="product image" />
+                                        <img src="{{ asset('admin/assets/front/imgs/shop/product-16-6.jpg') }}"
+                                            alt="product image" />
                                     </figure>
                                     <figure class="border-radius-10">
-                                        <img src="{{asset('admin/assets/front/imgs/shop/product-16-7.jpg')}}" alt="product image" />
+                                        <img src="{{ asset('admin/assets/front/imgs/shop/product-16-7.jpg') }}"
+                                            alt="product image" />
                                     </figure>
                                 </div>
                                 <!-- THUMBNAILS -->
                                 <div class="slider-nav-thumbnails pl-15 pr-15">
                                     <div>
-                                        <img src="{{asset('admin/assets/front/imgs/shop/thumbnail-3.jpg')}}" alt="product image" />
+                                        <img src="{{ asset('admin/assets/front/imgs/shop/thumbnail-3.jpg') }}"
+                                            alt="product image" />
                                     </div>
                                     <div>
-                                        <img src="{{asset('admin/assets/front/imgs/shop/thumbnail-4.jpg')}}" alt="product image" />
+                                        <img src="{{ asset('admin/assets/front/imgs/shop/thumbnail-4.jpg') }}"
+                                            alt="product image" />
                                     </div>
                                     <div>
-                                        <img src="{{asset('admin/assets/front/imgs/shop/thumbnail-5.jpg')}}" alt="product image" />
+                                        <img src="{{ asset('admin/assets/front/imgs/shop/thumbnail-5.jpg') }}"
+                                            alt="product image" />
                                     </div>
                                     <div>
-                                        <img src="{{asset('admin/assets/front/imgs/shop/thumbnail-6.jpg')}}" alt="product image" />
+                                        <img src="{{ asset('admin/assets/front/imgs/shop/thumbnail-6.jpg') }}"
+                                            alt="product image" />
                                     </div>
                                     <div>
-                                        <img src="{{asset('admin/assets/front/imgs/shop/thumbnail-7.jpg')}}" alt="product image" />
+                                        <img src="{{ asset('admin/assets/front/imgs/shop/thumbnail-7.jpg') }}"
+                                            alt="product image" />
                                     </div>
                                     <div>
-                                        <img src="{{asset('admin/assets/front/imgs/shop/thumbnail-8.jpg')}}" alt="product image" />
+                                        <img src="{{ asset('admin/assets/front/imgs/shop/thumbnail-8.jpg') }}"
+                                            alt="product image" />
                                     </div>
                                     <div>
-                                        <img src="{{asset('admin/assets/front/imgs/shop/thumbnail-9.jpg')}}" alt="product image" />
+                                        <img src="{{ asset('admin/assets/front/imgs/shop/thumbnail-9.jpg') }}"
+                                            alt="product image" />
                                     </div>
                                 </div>
                             </div>
@@ -68,16 +83,24 @@
                                 <ul class="text-grey-5 d-inline-block">
                                     <li><strong class="mr-10">Share this:</strong></li>
                                     <li class="social-facebook">
-                                        <a href="#"><img src="{{asset('admin/assets/front/imgs/theme/icons/icon-facebook.svg')}}" alt="" /></a>
+                                        <a href="#"><img
+                                                src="{{ asset('admin/assets/front/imgs/theme/icons/icon-facebook.svg') }}"
+                                                alt="" /></a>
                                     </li>
                                     <li class="social-twitter">
-                                        <a href="#"><img src="{{asset('admin/assets/front/imgs/theme/icons/icon-twitter.svg')}}" alt="" /></a>
+                                        <a href="#"><img
+                                                src="{{ asset('admin/assets/front/imgs/theme/icons/icon-twitter.svg') }}"
+                                                alt="" /></a>
                                     </li>
                                     <li class="social-instagram">
-                                        <a href="#"><img src="{{asset('admin/assets/front/imgs/theme/icons/icon-instagram.svg')}}" alt="" /></a>
+                                        <a href="#"><img
+                                                src="{{ asset('admin/assets/front/imgs/theme/icons/icon-instagram.svg') }}"
+                                                alt="" /></a>
                                     </li>
                                     <li class="social-linkedin">
-                                        <a href="#"><img src="{{asset('admin/assets/front/imgs/theme/icons/icon-pinterest.svg')}}" alt="" /></a>
+                                        <a href="#"><img
+                                                src="{{ asset('admin/assets/front/imgs/theme/icons/icon-pinterest.svg') }}"
+                                                alt="" /></a>
                                     </li>
                                 </ul>
                             </div>
@@ -124,22 +147,28 @@
                                             <a href="#" data-color="Red"><span class="product-color-red"></span></a>
                                         </li>
                                         <li>
-                                            <a href="#" data-color="Yellow"><span class="product-color-yellow"></span></a>
+                                            <a href="#" data-color="Yellow"><span
+                                                    class="product-color-yellow"></span></a>
                                         </li>
                                         <li class="active">
-                                            <a href="#" data-color="White"><span class="product-color-white"></span></a>
+                                            <a href="#" data-color="White"><span
+                                                    class="product-color-white"></span></a>
                                         </li>
                                         <li>
-                                            <a href="#" data-color="Orange"><span class="product-color-orange"></span></a>
+                                            <a href="#" data-color="Orange"><span
+                                                    class="product-color-orange"></span></a>
                                         </li>
                                         <li>
-                                            <a href="#" data-color="Cyan"><span class="product-color-cyan"></span></a>
+                                            <a href="#" data-color="Cyan"><span
+                                                    class="product-color-cyan"></span></a>
                                         </li>
                                         <li>
-                                            <a href="#" data-color="Green"><span class="product-color-green"></span></a>
+                                            <a href="#" data-color="Green"><span
+                                                    class="product-color-green"></span></a>
                                         </li>
                                         <li>
-                                            <a href="#" data-color="Purple"><span class="product-color-purple"></span></a>
+                                            <a href="#" data-color="Purple"><span
+                                                    class="product-color-purple"></span></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -164,8 +193,10 @@
                                         <button type="submit" class="button button-add-to-cart">
                                             Add to cart
                                         </button>
-                                        <a aria-label="Add To Wishlist" class="action-btn hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                        <a aria-label="Compare" class="action-btn hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                        <a aria-label="Add To Wishlist" class="action-btn hover-up"
+                                            href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                        <a aria-label="Compare" class="action-btn hover-up" href="shop-compare.html"><i
+                                                class="fi-rs-shuffle"></i></a>
                                     </div>
                                 </div>
                                 <ul class="product-meta font-xs color-grey mt-50">
@@ -187,7 +218,7 @@
             </div>
         </div>
     </div>
-@endsection
+@endsection --}}
 
 @section('mobile_header')
     <!-- Mobile Header -->
@@ -195,7 +226,7 @@
         <div class="mobile-header-wrapper-inner">
             <div class="mobile-header-top">
                 <div class="mobile-header-logo">
-                    <a href="index.html"><img src="{{asset('admin/assets/front/imgs/theme/logo.svg')}}" alt="logo"></a>
+                    <a href="index.html"><img src="{{ asset('admin/assets/front/imgs/theme/logo.svg') }}" alt="logo"></a>
                 </div>
                 <div class="mobile-menu-close close-style-wrap close-style-position-inherit">
                     <button class="close-style search-close">
@@ -218,14 +249,20 @@
                         </a>
                         <div class="categori-dropdown-wrap categori-dropdown-active-small">
                             <ul>
-                                <li><a href="shop-grid-right.html"><i class="evara-font-dress"></i>Women's Clothing</a></li>
-                                <li><a href="shop-grid-right.html"><i class="evara-font-tshirt"></i>Men's Clothing</a></li>
-                                <li> <a href="shop-grid-right.html"><i class="evara-font-smartphone"></i> Cellphones</a></li>
-                                <li><a href="shop-grid-right.html"><i class="evara-font-desktop"></i>Computer & Office</a></li>
-                                <li><a href="shop-grid-right.html"><i class="evara-font-cpu"></i>Consumer Electronics</a></li>
+                                <li><a href="shop-grid-right.html"><i class="evara-font-dress"></i>Women's Clothing</a>
+                                </li>
+                                <li><a href="shop-grid-right.html"><i class="evara-font-tshirt"></i>Men's Clothing</a>
+                                </li>
+                                <li> <a href="shop-grid-right.html"><i class="evara-font-smartphone"></i> Cellphones</a>
+                                </li>
+                                <li><a href="shop-grid-right.html"><i class="evara-font-desktop"></i>Computer & Office</a>
+                                </li>
+                                <li><a href="shop-grid-right.html"><i class="evara-font-cpu"></i>Consumer Electronics</a>
+                                </li>
                                 <li><a href="shop-grid-right.html"><i class="evara-font-home"></i>Home & Garden</a></li>
                                 <li><a href="shop-grid-right.html"><i class="evara-font-high-heels"></i>Shoes</a></li>
-                                <li><a href="shop-grid-right.html"><i class="evara-font-teddy-bear"></i>Mother & Kids</a></li>
+                                <li><a href="shop-grid-right.html"><i class="evara-font-teddy-bear"></i>Mother & Kids</a>
+                                </li>
                                 <li><a href="shop-grid-right.html"><i class="evara-font-kite"></i>Outdoor fun</a></li>
                             </ul>
                         </div>
@@ -233,7 +270,8 @@
                     <!-- mobile menu start -->
                     <nav>
                         <ul class="mobile-menu">
-                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="index.html">Home</a>
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a
+                                    href="index.html">Home</a>
                                 <ul class="dropdown">
                                     <li><a href="index.html">Home 1</a></li>
                                     <li><a href="index-2.html">Home 2</a></li>
@@ -241,14 +279,16 @@
                                     <li><a href="index-4.html">Home 4</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="shop-grid-right.html">shop</a>
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a
+                                    href="shop-grid-right.html">shop</a>
                                 <ul class="dropdown">
                                     <li><a href="shop-grid-right.html">Shop Grid – Right Sidebar</a></li>
                                     <li><a href="shop-grid-left.html">Shop Grid – Left Sidebar</a></li>
                                     <li><a href="shop-list-right.html">Shop List – Right Sidebar</a></li>
                                     <li><a href="shop-list-left.html">Shop List – Left Sidebar</a></li>
                                     <li><a href="shop-fullwidth.html">Shop - Wide</a></li>
-                                    <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Single Product</a>
+                                    <li class="menu-item-has-children"><span class="menu-expand"></span><a
+                                            href="#">Single Product</a>
                                         <ul class="dropdown">
                                             <li><a href="shop-product-right.html">Product – Right Sidebar</a></li>
                                             <li><a href="shop-product-left.html">Product – Left Sidebar</a></li>
@@ -262,9 +302,11 @@
                                     <li><a href="shop-compare.html">Shop – Compare</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Mega menu</a>
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Mega
+                                    menu</a>
                                 <ul class="dropdown">
-                                    <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Women's Fashion</a>
+                                    <li class="menu-item-has-children"><span class="menu-expand"></span><a
+                                            href="#">Women's Fashion</a>
                                         <ul class="dropdown">
                                             <li><a href="shop-product-right.html">Dresses</a></li>
                                             <li><a href="shop-product-right.html">Blouses & Shirts</a></li>
@@ -272,14 +314,16 @@
                                             <li><a href="shop-product-right.html">Women's Sets</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Men's Fashion</a>
+                                    <li class="menu-item-has-children"><span class="menu-expand"></span><a
+                                            href="#">Men's Fashion</a>
                                         <ul class="dropdown">
                                             <li><a href="shop-product-right.html">Jackets</a></li>
                                             <li><a href="shop-product-right.html">Casual Faux Leather</a></li>
                                             <li><a href="shop-product-right.html">Genuine Leather</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Technology</a>
+                                    <li class="menu-item-has-children"><span class="menu-expand"></span><a
+                                            href="#">Technology</a>
                                         <ul class="dropdown">
                                             <li><a href="shop-product-right.html">Gaming Laptops</a></li>
                                             <li><a href="shop-product-right.html">Ultraslim Laptops</a></li>
@@ -290,13 +334,15 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="blog-category-fullwidth.html">Blog</a>
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a
+                                    href="blog-category-fullwidth.html">Blog</a>
                                 <ul class="dropdown">
                                     <li><a href="blog-category-grid.html">Blog Category Grid</a></li>
                                     <li><a href="blog-category-list.html">Blog Category List</a></li>
                                     <li><a href="blog-category-big.html">Blog Category Big</a></li>
                                     <li><a href="blog-category-fullwidth.html">Blog Category Wide</a></li>
-                                    <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Single Product Layout</a>
+                                    <li class="menu-item-has-children"><span class="menu-expand"></span><a
+                                            href="#">Single Product Layout</a>
                                         <ul class="dropdown">
                                             <li><a href="blog-post-left.html">Left Sidebar</a></li>
                                             <li><a href="blog-post-right.html">Right Sidebar</a></li>
@@ -305,7 +351,8 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Pages</a>
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a
+                                    href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="page-about.html">About Us</a></li>
                                     <li><a href="page-contact.html">Contact</a></li>
@@ -317,7 +364,8 @@
                                     <li><a href="page-404.html">404 Page</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Language</a>
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a
+                                    href="#">Language</a>
                                 <ul class="dropdown">
                                     <li><a href="#">English</a></li>
                                     <li><a href="#">French</a></li>
@@ -342,11 +390,16 @@
                 </div>
                 <div class="mobile-social-icon">
                     <h5 class="mb-15 text-grey-4">Follow Us</h5>
-                    <a href="#"><img src="{{asset('admin/assets/front/imgs/theme/icons/icon-facebook.svg')}}" alt=""></a>
-                    <a href="#"><img src="{{asset('admin/assets/front/imgs/theme/icons/icon-twitter.svg')}}" alt=""></a>
-                    <a href="#"><img src="{{asset('admin/assets/front/imgs/theme/icons/icon-instagram.svg')}}" alt=""></a>
-                    <a href="#"><img src="{{asset('admin/assets/front/imgs/theme/icons/icon-pinterest.svg')}}" alt=""></a>
-                    <a href="#"><img src="{{asset('admin/assets/front/imgs/theme/icons/icon-youtube.svg')}}" alt=""></a>
+                    <a href="#"><img src="{{ asset('admin/assets/front/imgs/theme/icons/icon-facebook.svg') }}"
+                            alt=""></a>
+                    <a href="#"><img src="{{ asset('admin/assets/front/imgs/theme/icons/icon-twitter.svg') }}"
+                            alt=""></a>
+                    <a href="#"><img src="{{ asset('admin/assets/front/imgs/theme/icons/icon-instagram.svg') }}"
+                            alt=""></a>
+                    <a href="#"><img src="{{ asset('admin/assets/front/imgs/theme/icons/icon-pinterest.svg') }}"
+                            alt=""></a>
+                    <a href="#"><img src="{{ asset('admin/assets/front/imgs/theme/icons/icon-youtube.svg') }}"
+                            alt=""></a>
                 </div>
             </div>
         </div>
@@ -360,14 +413,16 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row product-grid-3">
-                        @foreach ($products as $product )
+                        @forelse ($products as $product)
                             <div class="col-lg-3 col-md-4">
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
-                                        <div class="product-img product-img-zoom" >
-                                            <a href="{{route('shop.show',$product->id)}}">
-                                                <img class="default-img w-100" src="{{ Storage::url($product->image) }}" alt="{{ $product->name }}" style="height: 200px;" />
-                                                <img class="hover-img w-100"   src="{{ Storage::url($product->image) }}" alt="{{ $product->name }}" style="height: 200px;" />
+                                        <div class="product-img product-img-zoom">
+                                            <a href="{{ route('shop.show', $product->id) }}">
+                                                <img class="default-img w-100" src="{{ Storage::url($product->image) }}"
+                                                    alt="{{ $product->name }}" style="height: 200px;" />
+                                                <img class="hover-img w-100" src="{{ Storage::url($product->image) }}"
+                                                    alt="{{ $product->name }}" style="height: 200px;" />
                                             </a>
                                         </div>
                                         {{-- <div class="product-action-1">
@@ -385,7 +440,8 @@
                                             <span>{{ $product->category->name }}</span>
                                         </div>
                                         <h2>
-                                            <a href="{{route('shop.show',$product->id)}}" class="text-capitalize">{{ $product->name }}</a>
+                                            <a href="{{ route('shop.show', $product->id) }}"
+                                                class="text-capitalize">{{ $product->name }}</a>
                                         </h2>
                                         <div class="rating-result" title="90%">
                                             <span>
@@ -397,12 +453,19 @@
                                             <span class="old-price">$245.8</span>
                                         </div>
                                         <div class="product-action-1 show">
-                                            <a aria-label="Add To Cart" class="action-btn hover-up" href="#"><i class="fi-rs-shopping-bag-add"></i></a>
+                                            <a aria-label="Add To Cart" class="action-btn hover-up" href="#"><i
+                                                    class="fi-rs-shopping-bag-add"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+                        @empty
+                            <div class="col-lg-8 mx-auto col-md-4 my-4">
+                                <div class="alert alert-danger text-center py-3" role="alert">
+                                    <h2>Oops! No Products Found.</h2>
+                                </div>
+                            </div>
+                        @endforelse
                     </div>
                     <div class="pagination-area mt-30 mb-50">
                         {{ $products->links() }}
