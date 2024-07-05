@@ -419,10 +419,10 @@
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             <a href="{{ route('shop.show', $product->id) }}">
-                                                <img class="default-img w-100" src="{{ Storage::url($product->image) }}"
-                                                    alt="{{ $product->name }}" style="height: 200px;" />
-                                                <img class="hover-img w-100" src="{{ Storage::url($product->image) }}"
-                                                    alt="{{ $product->name }}" style="height: 200px;" />
+                                                <img class="default-img w-100" src="{{ Storage::url($product->images[0]) }}"
+                                                    alt="{{ $product->name }}" title="{{ $product->name }}" style="height: 200px;" />
+                                                <img class="hover-img w-100" src="{{ Storage::url($product->images[0]) }}"
+                                                    alt="{{ $product->name }}" title="{{ $product->name }}" style="height: 200px;" />
                                             </a>
                                         </div>
                                         {{-- <div class="product-action-1">

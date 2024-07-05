@@ -37,10 +37,22 @@ class ProductController extends Controller
     public function store(StoreProductRequest $request)
     {
         $data = $request->validated();
-        $data['image'] = $request->image->store('products','public');
+        // $data['images'] = $request->images->store('products','public');
+
+        $data['images'] = [];
+        if ($request->hasfile('images')) {
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('products', 'public');
+                $data['images'][] = $path;
+            }
+        }
+
         Product::create($data);
 
+        toastr()->closeButton()->addsuccess('Product Added Succefully!');
+
         return redirect()->route('products.index');
+
     }
 
     /**
@@ -69,13 +81,26 @@ class ProductController extends Controller
         $data = $request->validated();
         $product = Product::findOrFail($id);
 
-        if ($request->hasFile('image')) {
-            if ($product->image) {
-                Storage::delete($product->image);
+        
+        if ($request->hasFile('images')) {
+            if ($product->images) {
+                Storage::delete($product->images);
             }
-            $data['image'] = $request->image->store('products');
+            // $data['image'] = $request->image->store('products');
+
+            $data['images'] = [];
+            if ($request->hasfile('images')) {
+                foreach ($request->file('images') as $image) {
+                    $path = $image->store('products', 'public');
+                    $data['images'][] = $path;
+                }
+            }
         }
+
         $product->update($data);
+
+        toastr()->closeButton()->addsuccess('Product Updated Succefully!');
+
         return redirect()->route('products.index');
     }
 
@@ -86,7 +111,8 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
         $product->delete();
-        Storage::delete($product->image);
+        Storage::delete($product->images);
+        toastr()->closeButton()->addsuccess('Product Deleted Succefully!');
         return redirect()->route('products.index');
     }
 }

@@ -57,7 +57,7 @@
                             <th scope="col">Description</th>
                             <th scope="col">Category</th>
                             <th scope="col">Price</th>
-                            <th scope="col">Image</th>
+                            <th scope="col">Images</th>
                             <th scope="col">Handle</th>
                         </tr>
                     </thead>
@@ -70,7 +70,16 @@
                                 <td>{{ $product->category->name }}</td>
                                 <td>{{ $product->price }} $</td>
                                 <td>
-                                    <img class='rounded' style='width:100px' src="{{ Storage::url($product->image) }}" alt="">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        @if($product->images)
+                                            @foreach ($product->images as $image)
+                                                <img src="{{ Storage::url($image) }}" title="{{ $product->name }}" alt={{ $product->name }} class='rounded' style='width:70px'>
+                                            @endforeach
+                                        @else
+                                            <img src="https://placehold.jp/70x70.png" title="{{ $product->name }}" alt={{ $product->name }} class='rounded' style='width:70px'>
+                                        @endif
+                                    </div>
+                                    {{-- <img class='rounded' style='width:100px' src="{{ Storage::url($product->image) }}" alt=""> --}}
                                 </td>
                                 <td>
                                     <a href="{{ route('products.edit', $product->id) }}"
@@ -89,9 +98,6 @@
                 </table>
 
 
-
-
-
             </div> <!-- card-body end// -->
         </div> <!-- card end// -->
         <div class="pagination-area mt-30 mb-50">
@@ -106,10 +112,10 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="delleteProductModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="delleteProductModalLabel">Delete Product</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form id="deleteProductForm" method="post">
+                <form action='{{ route('products.destroy', $product->id) }}"' id="deleteProductForm" method="post">
                     @csrf
                     @method('delete')
                     <div class="modal-body">
@@ -127,10 +133,10 @@
 
 
 
-@section('js')
+{{-- @section('js')
     <script>
         $(document).on('click', '.delteBtn', function(){
             $('#deleteProductForm').attr('action', $(this).data('url'));
         });
     </script>
-@endsection
+@endsection --}}

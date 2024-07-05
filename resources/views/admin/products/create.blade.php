@@ -78,8 +78,8 @@
                                 <div class="col-md-9">
                                     <div class="mb-4">
                                         <label class="form-label">Images</label>
-                                        <input name="image" class="form-control" type="file">
-                                        @error('image')
+                                        <input name="images[]" accept="image/*" class="form-control" type="file" multiple >
+                                        @error('images')
                                             <div class="text-danger">* {{ $message }}</div>
                                         @enderror
                                     </div>

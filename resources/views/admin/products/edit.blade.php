@@ -81,9 +81,12 @@
                                 <div class="col-md-9">
                                     <div class="mb-4">
                                         <label class="form-label">Images</label>
-                                        <input name="image" class="form-control" type="file">
-                                        <img src="{{ Storage::url($product->image) }}" width="100" alt="">
-                                        @error('image')
+                                        <input name="images[]" class="form-control" type="file" multiple >
+                                        {{-- <img src="{{ Storage::url($product->image) }}" width="100" alt=""> --}}
+                                        @foreach ($product->images as $image)
+                                                <img src="{{ Storage::url($image) }}" title="{{ $product->name }}" alt={{ $product->name }} class='rounded' style='width:70px'>
+                                            @endforeach
+                                        @error('images')
                                             <div class="text-danger">*{{ $message }}</div>
                                         @enderror
                                     </div>

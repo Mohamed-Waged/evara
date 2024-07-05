@@ -9,10 +9,12 @@ class Product extends Model
 {
     use HasFactory;
 
-    // protected $fillable = ['name', 'desc', 'price', 'image'];
+    // protected $fillable = ['name', 'desc', 'price', 'images'];
     protected $guarded = ['id', 'created_at', 'updated-at'];
 
-
+    protected $casts = [
+        'images' => 'array',
+    ];
 
     // one to one
     public function category()
